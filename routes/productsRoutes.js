@@ -7,6 +7,8 @@ productRouter.route('/')
     .post(productsController.addProduct);
 
 productRouter.route('/:id')
-    .put(productsController.replaceProduct);
+    .put(productsController.replaceProduct)
+    .patch(productsController.updateProduct)
+    .delete(productsController.deleteProduct);
 
 module.exports = productRouter;

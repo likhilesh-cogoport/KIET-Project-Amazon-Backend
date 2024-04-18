@@ -9,6 +9,25 @@ const productSchema = mongoose.Schema({
         type: Number,
         required: true,
     },
+    info: {
+        category: String,
+        brand: String,
+        ratingCount: Number,
+        ratingValue: Number,
+        stock: Number,
+        specificOffers: [
+            {
+                title: String,
+                description: String,
+            }
+        ],
+        amazonServices: [
+            {
+                title: String,
+                description: String,
+            }
+        ]
+    },
     description: String,
     images: [String],
     createdAt: {
