@@ -4,6 +4,7 @@ const app = express();
 const test = require('./models/productsModel.js')
 const mongoose = require('mongoose');
 
+app.use(express.json());
 app.use('/api/products', productsRouter)
 
 const url = 'mongodb+srv://$_USERNAME_$:$_PASSWORD_$@cluster0.dpithd6.mongodb.net/$_DB_NAME_$?retryWrites=true&w=majority&appName=Cluster0';
